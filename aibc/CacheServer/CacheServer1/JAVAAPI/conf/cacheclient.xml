@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CacheClientConfig>
+	<!-- 超时重连，单位：秒 -->
+	<reconnectInterval>10</reconnectInterval>
+	<!-- 等待删除超时时间间隔，单位：秒 -->
+	<deleteDataTimeout>60</deleteDataTimeout>
+	<!-- 每次发送删除超时时间条数 -->
+	<deleteTimeOutSize>100</deleteTimeOutSize>
+	
+	<!-- cacheServer服务器 #所有Server的Range必须从0～99 多个服务器时取平均区间。可配多个服务 -->
+
+
+<!--	<Server>-->
+<!--		<address>10.3.3.92</address>-->
+<!--		<port>8120</port>-->
+<!--		<minRange>0</minRange>-->
+<!--		<maxRange>33</maxRange>-->
+<!--	</Server>-->
+<!--	<Server>-->
+<!--		<address>10.3.3.92</address>-->
+<!--		<port>8121</port>-->
+<!--		<minRange>34</minRange>-->
+<!--		<maxRange>67</maxRange>-->
+<!--	</Server>-->
+<!--	<Server>-->
+<!--		<address>10.3.3.92</address>-->
+<!--		<port>8122</port>-->
+<!--		<minRange>68</minRange>-->
+<!--		<maxRange>99</maxRange>-->
+<!--	</Server>-->
+	<Server>
+		<address>10.3.3.138</address>
+		<port>8125</port>
+		<minRange>0</minRange>
+		<maxRange>21</maxRange>
+	</Server>
+	<Server>
+		<address>10.3.3.138</address>
+		<port>8126</port>
+		<minRange>22</minRange>
+		<maxRange>45</maxRange>
+	</Server>
+		<Server>
+		<address>10.3.3.138</address>
+		<port>8127</port>
+		<minRange>46</minRange>
+		<maxRange>99</maxRange>
+	</Server>
+		<!--  <Server>
+		<address>10.3.3.140</address>
+		<port>8121</port>
+		<minRange>50</minRange>
+		<maxRange>99</maxRange>
+	</Server>-->
+	
+</CacheClientConfig>

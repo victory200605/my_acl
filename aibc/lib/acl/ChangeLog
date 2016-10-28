@@ -1,0 +1,88 @@
+2009-06-26 daizh daizh@asiainfo.com
+    # acl first release - version 1.0
+    * Reactor.cpp: Dispatch function may be death loop, 
+                   Because stack viariable liRevents cann't be cleared dispathed event
+    * SockStream.cpp: RecvUntil function return value must be included apcTag length
+    * SockHandle.cpp: SockHandlePair Open function return value type error, -1 Instead of using false
+    * Dir.h: head macro defined error, ACL_DIR_H Instead of using ACL_FILE_H
+
+2009-08-18 daizh daizh@aisinfo.com
+    # version 1.0
+    + Log.h : added class CHexFormatter
+    * MemoryBlock.h : fixed FMM(free missing match) in Resize function, 
+    * Process.h : added GetChildID method
+    * SockAcceptor.h : added non-block Accept method
+    * SockStream.h : added RecvV/SendV method for CMemoryBlock
+    * SockAddr.h : added GetIpAddr/GetPort method
+    * SockConnector.h : added non-block Connect method
+    * SockDgram.h : added Open method and not need to bind addr
+    * Xml.h/Xml.cpp : added class XmlRootElement and modified Parse/Create xml method
+    + Singleton.h
+    + aaf/Server.h & aaf/Server.cpp
+    + aaf/LogServer.h & aaf/LogServer.cpp
+    + aaf/TrapServer.h & aaf/TrapServer.cpp
+    + aaf/ConfigServer.h & aaf/ConfigServer.cpp
+    + aaf/DaemonServer.h and &/DaemonServer.cpp
+
+2009-09-17 daizhi daizh@aisinfo.com
+    # version 1.0
+    + stl/set.h
+    * DateTime.h: added copy operator method and modified Modify the apl_mktime return value judgments
+
+2009-10-09 daizhi daizh@asiainfo.com
+    #version 1.1
+    + FileStream.h/FileStream.cpp
+    + MemoryStream.h/MemoryStream.cpp
+    + codecs/Binary.h/codecs/Binary.cpp
+    + codecs/Hex.h/codecs/Hex.cpp
+    + codecs/Escape.h/codecs/Escape.cpp
+    + codecs/Base64.h/codecs/Base64.cpp
+    + codecs/Unicode.h/codecs/Unicode.cpp
+
+2009-10-20 daizh@asiainfo.com
+    # version 1.1
+    * FileStream.h/FileStream.cpp: add IsEof function
+    * CXmlElement: Add* functions add @aiGrowBy paramter
+
+2009-12-5 daizh@asiainfo.com
+    # version 1.2
+    ! Separate smartptr/SharePtr.h smartptr/ShareArray.h smartptr/ScopePtr smartptr/ScopeArray.h from smartptr.h
+    * Poll.h: add typedef CPollee CPoll, the class name define is mistake, I'm sorry
+    * MemCache.h: OPT_OVERWRITE/OPT_NOOVERWRITE will be replaced by DO_OVERWRITE/DONT_OVERWRITE, 
+                  and OPT_OVERWRITE/OPT_NOOVERWRITE will be reserved for compatibility
+
+2009-12-22 fengzz@asiainfo.com
+    # version 1.2
+    + IndexDict.h/IndexDict.cpp: A map like object that map integer to strings
+
+2010-6-2 daizh@asiainfo.com
+    # version 1.2
+    + BitArray.h/BitArray.cpp: like std::vector
+    * aaf/LogService.h/aaf/LogService.cpp: FIXED losting log bug
+    * SockAddr.h/SockAddr.cpp: Add operator =/operator == /operator !=
+    * Synch.h/Synch.cpp: Add Condition::Wait for a absoluted time, Semaphore::Wait for a absoluted time
+    * Timestamp.h/Timestamp.cpp: Add constructor CTimestamp::CTimestamp(EPrecision)
+    * SockDgramMcast.h/SockDgramMcast.cpp: rename send to sendM, and modified method CSockDgramMcast::Join and CSockDgramMcast::Open
+    * SockStream.h/SockStream.cpp: remove method CSockStream::Recv(CMemoryBlock*)
+    * PersistentQueue.h: auto remove empty file and alignment incomplete file size
+
+2010-7-1 daizh@asiainfo.com
+    # version 1.2
+    * src/MemoryBlock.cpp: FIXED operator = memory leak bug
+    * src/SockAddr.cpp: Add assert in constructor when exception happening
+    * Timestamp/DataTime: Add some method for Updating
+    * Hex/Binary: FIXED Decoder GetLength() return value bug
+
+2010-8-25 daizh@asiainfo.com
+    # version 1.2
+    + Unicode.cpp/Unicode.h: Add class CUTF8ToGBKTranscode/CGBKToUTF8Transcode CUTF8ToBIG5Transcode/CBIG5ToUFT8Transcode
+
+2010-9-1 daizh@asiainfo-linkage.com
+    # version 1.2
+    * src/FileStream.cpp: FIXED ReadLine function return -1 when read a empty line 
+    * src/MemoryStream.cpp: Modified to support FileStream::ReadLine
+
+2011-10-13 daizh@asiainfo-linkage.com
+    # version 2.0
+    * src/FileStream.cpp: FIXED ReadLine function split line failed when '\r' is end character of the buffer 
+    * src/FileStream.cpp: FileStream add FileStream::Tell method to ignore buffer effect 

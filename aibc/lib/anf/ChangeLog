@@ -1,0 +1,10 @@
+2009-12-26 daizh daizh@asiainfo.com
+    # anf first release - version 1.0
+
+2010-07-30 daizh daizh@aisinfo.com
+    # version 1.0
+    * IoSession/IoPollingProcessor : fixed IoSession::SuspendWrite/IoSession::SuspendRead can't safe-update session traffic event
+
+2010-08-17 daizh daizh@asiainfo.com
+    #version 1.0
+    + CmdLineMessage/CmdLineMesssageFilter : support command line protocol

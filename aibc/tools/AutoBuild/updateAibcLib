@@ -1,0 +1,17 @@
+#!/bin/sh
+
+srcpath=
+
+if [ "$1" = "32" ] ; then
+    srcpath=/tmp/__buildbot_inst
+elif [ "$1" = "64" ] ; then
+    srcpath=/tmp/__buildbot_inst_64
+else
+    echo "Error when update aibc lib file"
+    exit -1
+fi
+
+rm -rf $HOME/aibclib_autobuild/lib_inst_$1/include
+rm -rf $HOME/aibclib_autobuild/lib_inst_$1/lib
+cp -r $srcpath/usr/local/include $HOME/aibclib_autobuild/lib_inst_$1/
+cp -r $srcpath/usr/local/lib $HOME/aibclib_autobuild/lib_inst_$1/

@@ -1,0 +1,39 @@
+#!/bin/sh
+
+unset AIBC_HOME
+AIBC_HOME=$HOME/aibclib_autobuild/lib_inst_64/
+export AIBC_HOME
+
+cd $HOME/buildbot/slave/gfq_solaris_64/build/
+
+autoreconf -vi aibc/GFQ/configure.ac
+
+if [ $? -ne 0 ] ; then
+    echo "autoreconf failed"
+    exit -1
+fi
+
+./aibc/GFQ/configure CFLAGS="-g -Wall -m64" CXXFLAGS="-g -Wall -m64"
+
+if [ $? -ne 0 ] ; then
+    echo "./configure failed"
+    exit -1
+fi
+
+make clean
+
+make
+
+if [ $? -ne 0 ] ; then
+    echo "make failed"
+    exit -1
+fi
+
+make install DESTDIR=/tmp/__buildbot_gfq_inst_64
+
+if [ $? -ne 0 ] ; then
+    echo "make install failed"
+    exit -1
+fi
+
+exit 0

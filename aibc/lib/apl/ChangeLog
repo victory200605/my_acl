@@ -1,0 +1,32 @@
+2010-01-28 hezk hezk@asiainfo.com
+    * src/sockaddr.c: add interface to get host IP address list
+    * include/apl/sockaddr.h: Ditto
+    * test/TestAplSockAddr.cpp: add test case for apl_get_hostaddr_list()
+
+2010-01-28 fengzz fengzz@asiainfo.com
+    * src/str.c: fixed a bug on apl_strncpy() a "" string
+    * src/sockopt.c: tidy the code 
+
+2009-07-20 fengzz fengzz@asiainfo.com
+    * src/sockopt.c: fixed some warning message
+
+2009-07-20 hezk hezk@asiainfo.com
+    version 1.0.1
+    * configure.ac: remove gnulib's snprintf from apl. It's found buggy when
+        using purify in Solaris10(x86).
+    * src/str.c: Ditto 
+    * test/TestAplStr.cpp: Ditto 
+    * include/apl/str.h: Ditto
+    * include/apl/sockopt.h: remove unuse declaration.
+
+2009-06-26 fengzz fengzz@asiainfo.com
+    # apl first release - version 1.0
+    ! Known bug on HPUX. pthread_cond_destroy would return EBUSY in some 
+      cases. The work around is setting PTHREAD_COND_PERF in the envirnment:
+          export PTHREAD_COND_PERF=2
+
+
+    Copyright (C) Asiainfo, Inc.
+
+    Copying and distribution of this file, with or without modification, are 
+    permitted provided the copyright notice and this notice are preserved.

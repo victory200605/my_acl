@@ -1,0 +1,15 @@
+2010-06-18 daizh daizh@asiainfo.com
+    # GFQ2 first release - version 1.0.0
+
+
+    Copyright (C) Asiainfo, Inc.
+
+    Copying and distribution of this file, with or without modification, are 
+	permitted provided the copyright notice and this notice are preserved.
+
+2011-06-04 daizh daizh@asiainfo-linkage.com
+    # version 1.0
+    * api/GFQueueClientImpl.cpp: Rejected zero-length data insert into GFQ
+    * master/ServerHandler.cpp: Changed log level of ERROR_QUEUE_UNEXISTED and ERROR_END_OF_QUEUE from error to debug
+    + segmentserver/GFQDumper.cpp: Dump segment storage info
+    * master/MasterConfig.cpp: Auto refresh configuration on queue info

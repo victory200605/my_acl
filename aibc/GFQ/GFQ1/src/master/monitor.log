@@ -1,0 +1,100 @@
+2010/01/23 11:54:48:INFO: ======================================================
+2010/01/23 11:54:48:INFO: Start to run parent [5681]...
+2010/01/23 11:54:48:INFO: [Server]:Recv Connected request from [127.0.0.1:50372], [Type=0]
+2010/01/23 11:54:48:INFO: [Server]:Allocate Idle Channel Connection slot success, [Handle=6]/[ChannelID=0]
+2010/01/23 11:54:48:INFO: [Server]:Recv Connected request from [127.0.0.1:50373], [Type=0]
+2010/01/23 11:54:48:INFO: [Server]:Channel Connection Handshake success, [Handle=7]/[ChannelID=0]
+2010/01/23 11:54:48:INFO: [Channel 127.0.0.1:50373] Child [5683] login success
+2010/01/23 11:54:50:INFO: [Channel 127.0.0.1:50373] Child logout, child process exited
+2010/01/23 11:55:09:INFO: Parent [5681] exit now...
+2010/01/23 11:55:09:INFO: ======================================================
+2010/01/23 11:56:31:INFO: ======================================================
+2010/01/23 11:56:31:INFO: Start to run parent [5803]...
+2010/01/23 11:56:31:INFO: [Server]:Recv Connected request from [127.0.0.1:50374], [Type=0]
+2010/01/23 11:56:31:INFO: [Server]:Allocate Idle Channel Connection slot success, [Handle=6]/[ChannelID=0]
+2010/01/23 11:56:31:INFO: [Server]:Recv Connected request from [127.0.0.1:50375], [Type=0]
+2010/01/23 11:56:31:INFO: [Server]:Channel Connection Handshake success, [Handle=7]/[ChannelID=0]
+2010/01/23 11:56:31:INFO: [Channel 127.0.0.1:50375] Child [5805] login success
+2010/01/23 14:35:53:INFO: ======================================================
+2010/01/23 14:35:53:INFO: Start to run parent [9621]...
+2010/01/23 14:35:53:INFO: [Server]:Recv Connected request from [127.0.0.1:57820], [Type=0]
+2010/01/23 14:35:53:INFO: [Server]:Allocate Idle Channel Connection slot success, [Handle=6]/[ChannelID=0]
+2010/01/23 14:35:53:INFO: [Server]:Recv Connected request from [127.0.0.1:57821], [Type=0]
+2010/01/23 14:35:53:INFO: [Server]:Channel Connection Handshake success, [Handle=7]/[ChannelID=0]
+2010/01/23 14:35:53:INFO: [Channel 127.0.0.1:57821] Child [9623] login success
+2010/01/23 17:56:27:INFO: [Channel 127.0.0.1:57821] Child logout, child process exited
+2010/01/23 17:56:29:INFO: Parent [9621] exit now...
+2010/01/23 17:56:29:INFO: ======================================================
+2010/03/05 16:01:19:INFO: ======================================================
+2010/03/05 16:01:19:INFO: Start to run parent [6390]...
+2010/03/05 16:01:19:INFO: [Server]:Recv Connected request from [127.0.0.1:45177], [Type=0]
+2010/03/05 16:01:19:INFO: [Server]:Allocate Idle Channel Connection slot success, [Handle=6]/[ChannelID=0]
+2010/03/05 16:01:19:INFO: [Server]:Recv Connected request from [127.0.0.1:45178], [Type=0]
+2010/03/05 16:01:19:INFO: [Server]:Channel Connection Handshake success, [Handle=7]/[ChannelID=0]
+2010/03/05 16:01:19:INFO: [Channel 127.0.0.1:45178] Child [6392] login success
+2010/03/05 16:01:21:INFO: [Channel 127.0.0.1:45178] Child logout, child process exited
+2010/03/05 16:01:40:INFO: Parent [6390] exit now...
+2010/03/05 16:01:40:INFO: ======================================================
+2010/03/05 16:01:45:INFO: ======================================================
+2010/03/05 16:01:45:INFO: Start to run parent [6449]...
+2010/03/05 16:01:45:INFO: [Server]:Recv Connected request from [127.0.0.1:45184], [Type=0]
+2010/03/05 16:01:45:INFO: [Server]:Allocate Idle Channel Connection slot success, [Handle=6]/[ChannelID=0]
+2010/03/05 16:01:45:INFO: [Server]:Recv Connected request from [127.0.0.1:45185], [Type=0]
+2010/03/05 16:01:45:INFO: [Server]:Channel Connection Handshake success, [Handle=7]/[ChannelID=0]
+2010/03/05 16:01:45:INFO: [Channel 127.0.0.1:45185] Child [6451] login success
+2010/03/05 16:11:59:INFO: ======================================================
+2010/03/05 16:11:59:INFO: Start to run parent [7301]...
+2010/03/05 16:11:59:INFO: [Server]:Recv Connected request from [127.0.0.1:48963], [Type=0]
+2010/03/05 16:11:59:INFO: [Server]:Allocate Idle Channel Connection slot success, [Handle=6]/[ChannelID=0]
+2010/03/05 16:11:59:INFO: [Server]:Recv Connected request from [127.0.0.1:48964], [Type=0]
+2010/03/05 16:11:59:INFO: [Server]:Channel Connection Handshake success, [Handle=7]/[ChannelID=0]
+2010/03/05 16:11:59:INFO: [Channel 127.0.0.1:48964] Child [7303] login success
+2010/03/05 16:26:32:INFO: ======================================================
+2010/03/05 16:26:32:INFO: Start to run parent [7736]...
+2010/03/05 16:26:32:INFO: [Server]:Recv Connected request from [127.0.0.1:48809], [Type=0]
+2010/03/05 16:26:32:INFO: [Server]:Allocate Idle Channel Connection slot success, [Handle=6]/[ChannelID=0]
+2010/03/05 16:26:32:INFO: [Server]:Recv Connected request from [127.0.0.1:48810], [Type=0]
+2010/03/05 16:26:32:INFO: [Server]:Channel Connection Handshake success, [Handle=7]/[ChannelID=0]
+2010/03/05 16:26:32:INFO: [Channel 127.0.0.1:48810] Child [7738] login success
+2010/06/01 09:36:44:INFO: ======================================================
+2010/06/01 09:36:44:INFO: Start to run parent [2706]...
+2010/06/01 09:36:44:INFO: [Server]:Recv Connected request from [127.0.0.1:44457], [Type=0]
+2010/06/01 09:36:44:INFO: [Server]:Allocate Idle Channel Connection slot success, [Handle=6]/[ChannelID=0]
+2010/06/01 09:36:44:INFO: [Server]:Recv Connected request from [127.0.0.1:44458], [Type=0]
+2010/06/01 09:36:44:INFO: [Server]:Channel Connection Handshake success, [Handle=7]/[ChannelID=0]
+2010/06/01 09:36:44:INFO: [Channel 127.0.0.1:44458] Child [2708] login success
+2010/06/01 09:36:46:INFO: [Channel 127.0.0.1:44458] Child logout, child process exited
+2010/06/01 09:37:05:INFO: Parent [2706] exit now...
+2010/06/01 09:37:05:INFO: ======================================================
+2010/06/01 09:41:17:INFO: ======================================================
+2010/06/01 09:41:17:INFO: Start to run parent [2802]...
+2010/06/01 09:41:17:INFO: [Server]:Recv Connected request from [127.0.0.1:40213], [Type=0]
+2010/06/01 09:41:17:INFO: [Server]:Allocate Idle Channel Connection slot success, [Handle=6]/[ChannelID=0]
+2010/06/01 09:41:17:INFO: [Server]:Recv Connected request from [127.0.0.1:40214], [Type=0]
+2010/06/01 09:41:17:INFO: [Server]:Channel Connection Handshake success, [Handle=7]/[ChannelID=0]
+2010/06/01 09:41:17:INFO: [Channel 127.0.0.1:40214] Child [2804] login success
+2010/06/01 09:41:17:INFO: [Channel 127.0.0.1:40214] Child logout, child process exited
+2010/06/01 09:41:37:INFO: Parent [2802] exit now...
+2010/06/01 09:41:37:INFO: ======================================================
+2010/06/01 09:44:34:INFO: ======================================================
+2010/06/01 09:44:34:INFO: Start to run parent [2963]...
+2010/06/01 09:44:34:INFO: [Server]:Recv Connected request from [127.0.0.1:40215], [Type=0]
+2010/06/01 09:44:34:INFO: [Server]:Allocate Idle Channel Connection slot success, [Handle=6]/[ChannelID=0]
+2010/06/01 09:44:34:INFO: [Server]:Recv Connected request from [127.0.0.1:40216], [Type=0]
+2010/06/01 09:44:34:INFO: [Server]:Channel Connection Handshake success, [Handle=7]/[ChannelID=0]
+2010/06/01 09:44:34:INFO: [Channel 127.0.0.1:40216] Child [2965] login success
+2010/06/01 09:44:36:INFO: [Channel 127.0.0.1:40216] Child logout, child process exited
+2010/06/01 09:44:56:INFO: Parent [2963] exit now...
+2010/06/01 09:44:56:INFO: ======================================================
+2010/06/01 09:50:47:INFO: ======================================================
+2010/06/01 09:50:47:INFO: Start to run parent [3310]...
+2010/06/01 09:50:47:INFO: [Server]:Recv Connected request from [127.0.0.1:41647], [Type=0]
+2010/06/01 09:50:47:INFO: [Server]:Allocate Idle Channel Connection slot success, [Handle=6]/[ChannelID=0]
+2010/06/01 09:50:47:INFO: [Server]:Recv Connected request from [127.0.0.1:41648], [Type=0]
+2010/06/01 09:50:47:INFO: [Server]:Channel Connection Handshake success, [Handle=7]/[ChannelID=0]
+2010/06/01 09:50:47:INFO: [Channel 127.0.0.1:41648] Child [3312] login success
+2010/06/01 09:50:51:INFO: [Channel 127.0.0.1:41648] Child logout, child process exited
+2010/06/01 09:51:09:INFO: Parent [3310] exit now...
+2010/06/01 09:51:09:INFO: ======================================================
+2010/11/22 16:47:19:INFO: ======================================================
+2010/11/22 16:47:19:INFO: Start to run parent [11245]...

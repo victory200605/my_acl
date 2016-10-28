@@ -1,0 +1,23 @@
+#Mon Dec 29 17:31:58 CST 2008
+eclipse.preferences.version=1
+encoding//src/ismg_icp.py=UTF-8
+encoding//src/pyailib/__init__.py=UTF-8
+encoding//src/pyailib/twisted/__init__.py=UTF-8
+encoding//src/pyailib/twisted/asynclib/__init__.py=UTF-8
+encoding//src/pyailib/twisted/cmpp/__init__.py=UTF-8
+encoding//src/pyailib/twisted/cmpp/cmpp.py=UTF-8
+encoding//src/pyailib/twisted/cmpp/ismg.py=UTF-8
+encoding//src/pyailib/twisted/smpp/__init__.py=UTF-8
+encoding//src/pyailib/twisted/smpp/constants.py=UTF-8
+encoding//src/pyailib/twisted/smpp/interfaces.py=UTF-8
+encoding//src/pyailib/twisted/smpp/pdu.py=UTF-8
+encoding//src/pyailib/twisted/smpp/smsc.py=UTF-8
+encoding//src/pyailib/twisted/utils.py=UTF-8
+encoding//src/pyailib/utils/__init__.py=UTF-8
+encoding//src/pyailib/utils/cdr.py=UTF-8
+encoding//src/pyailib/utils/counter.py=UTF-8
+encoding//src/pyailib/utils/main.py=UTF-8
+encoding//src/pyailib/utils/sequence.py=UTF-8
+encoding//src/pyailib/utils/session_manager.py=UTF-8
+encoding//src/simple_proxy.py=UTF-8
+encoding//src/smsc_sim.py=UTF-8

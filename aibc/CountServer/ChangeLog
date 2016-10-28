@@ -1,0 +1,18 @@
+2009-07-21 daizh daizh@asiainfo.com
+    # countserver first release - version 1.0.0
+
+
+    Copyright (C) Asiainfo, Inc.
+
+    Copying and distribution of this file, with or without modification, are 
+	permitted provided the copyright notice and this notice are preserved.
+
+2009-07-28 daizh daizh@asiainfo.com
+    #version 1.0.1
+    !CountServer.cpp: Add DispatchRequest function to dispatch request in recv buffer.
+                      if listen handle is readable but accept fail will be abort.
+                      Resource will be released in countserver eixting.
+    !ConfigureServer.cpp: Format configureserver log, and optimize calling relation of member functions.
+                      Enhanced exception handling, and Resource will be released in configureserver eixting.
+    !LogServer.cpp:   Resource will be released in logserver eixting.
+    !Table.cpp:       Resource will be released in Release() and optimize stl code.

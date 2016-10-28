@@ -1,0 +1,156 @@
+
+Here is a brief description about the aibclib auto build system
+which depend on Buildbot project.
+
+--management
+--------------------------------------------------------------------------------
+    Manager/Monitor the aibclib auto build thru: http://10.3.3.108:8010
+    
+    Usually, the autobuild is self-contained. That's say, whenever there is a 
+commit (which related to aibclib) to CVS, the auto build would be triggered in 
+ten minutes. 
+
+    This is because there is a python script running in 10.3.3.108's cron:
+    /DEVHome/aibcbuildbot/bin/aibcUpToDate.py
+
+    Administrator could also force a build thru the web UI. 
+
+    After the build, both the bin and dev package would ftp to the specified 
+path in demo machine (10.3.3.26). All aibclib package would place in the 
+sub-directory of: 
+
+    /package/AIBC/release/AIBCLib/DailyBuild
+
+    The path of the aibclib package in demo machine is depend on the platform: 
+
+    sparc-sun-solaris2.10-32           --solaris10 32-bit
+    sparc-sun-solaris2.10-64           --solaris10 64-bit
+    sparc-sun-solaris2.8-32            --solaris8 32-bit
+    x86_64-suse10t131-linux-gnu-32     --suse10 32-bit
+    x86_64-suse10t131-linux-gnu-64     --suse10 64-bit
+    i686-suse9dev37-linux-gnu-32       --suse9 32-bit
+    i686-suse8dev35-linux-gnu-32       --suse8 32-bit
+    x86_64-rh5t151-linux-gnu-32        --redhat5 32-bit
+    x86_64-rh5t151-linux-gnu-64        --redhat5 64-bit
+
+    Finally, a notify mail would send to the guys in maillist. Or, a warning 
+mail would send if the build failed.
+
+--topology
+--------------------------------------------------------------------------------
+
+                                     solaris10(Master)
+                                            |
+                                            |
+    |---------------|---------------|---------------|---------------|---------------|
+    |               |               |               |               |               |
+suse10(Slave)  suse9(Slave)    suse8(Slave)   solaris10(Slave)  sol8(Slave)   redhat5(Slave)
+
+
+Host:       user/passwd, ip (comments)
+----------------------------------------
+solaris10:    aibcbuildbot/aibc, 10.3.3.108 (both master and slave)
+sol8:         aibcbuildbot/aibc, 10.3.2.3
+suse10:       aibcbuildbot/aibc, 10.3.3.131
+suse9:        aibcbuildbot/aibc, 10.3.2.37
+suse8:        aibcbuildbot/aibc, 10.3.2.35
+redhat5:      aibcbuildbot/aibc, 10.3.3.151
+
+----------------------------------------
+
+--configuration
+--------------------------------------------------------------------------------
+    The most configuration is located in the master, that is 
+/DEVHome/aibcbuildbot/buildbot/master/aibc/master.cfg in 10.3.3.108. 
+Change this file if you want to add/delete/modify compile modules.
+
+    Currently, the following compile modules are configured in master:
+
+Platform    Modules
+----------------------------------------
+suse10      suse10, suse10_64, 
+            suse10_gfq1, suse10_gfq1_64,
+            suse10_adl_64,
+            suse10_cacheserver1, suse10_cacheserver1_64
+suse9       suse9,
+            suse9_gfq1,
+            suse9_adl,
+            suse9_cacheserver1
+suse8       suse8,
+            suse8_gfq1,
+            suse8_adl,
+            suse8_cacheserver1
+solaris10   solaris10, solaris10_64, 
+            solaris10_gfq1, solaris10_gfq1_64,
+            solaris10_adl, 
+            solaris10_cacheserver1, solaris10_cacheserver1_64
+sol8        sol8,
+            sol8_gfq1,
+            sol8_adl,
+            sol8_cacheserver1
+redhat5     redhat5, redhat5_64, 
+            redhat5_gfq1, redhat5_gfq1_64,
+            redhat5_adl, 
+            redhat5_cacheserver1, redhat5_cacheserver1_64
+
+----------------------------------------
+
+    Notes: 
+        1. PLATFORM means 32-bit aibclib while PLATFORM_64 means 64-bit 
+           aibclib. e.g. suse10 means 32-bit aibclib in suse10, and suse10_64 
+           means 64-bit aibclib in suse10. 
+        2. PLATFORM_daemon means 32-bit daemon module while PLATFORM_daemon_64
+           means a 64-bit one. e.g. suse10_gfq1 means 32-bit gfq1 module in 
+           suse10 and so forth.
+        3. A aibclib build would trigger all the gfq1/cacheserver1 build 
+           automatically. Because both them are depend on aibclib.
+
+   Primary options in master.cfg:
+
+   c['slaves'] -- configure a Slave's name and passwd.
+   c['slavePortnum'] -- master listen port, this port is need when creating a 
+                        new slave.
+   c['change_source'] -- how the master know the src is changed. Refer to manual.
+   c['schedulers'] -- whenever src is change, the scheduler in this list would
+                      be called. 
+                      "builderNames"    -- the build name which correspond with 
+                                           the builder name in c['builders']
+                      "fileIsImportant" -- could determine triggle the related 
+                                           build or not. 
+                      "upstream"        -- current build would triggle after the 
+                                           upstream build finished.
+   factory.BuildFactory()  -- build factory, add all the build steps to it thru 
+                              addStep()
+   builders      -- including 4 attributes: 
+                        "builder name"  -- correspond with builderNames in 
+                                           schedulers.
+                        "slavename"     -- correspond with slave name in c['slaves']
+                        "builddir"      -- build dir for this builder
+                        "factory"       -- build factory correspond with 
+                                           factory.BuildFactory()
+   c['builders'] -- all the builders 
+   c['status'].append(html.WebStatus(http_port=8010, allowForce=True))
+                 "http_port" -- the http port of manager.
+                 "allowForce" -- allow force build thru http manager UI.
+   c["status"].append(mail.MailNotifier)  -- mail notifier.
+
+
+--package
+--------------------------------------------------------------------------------
+    The related packages to setup the auto build system:
+
+    Python-2.5.4.tar.gz
+    Twisted-9.0.0.tar.bz2
+    zope.interface-3.3.0.tar.gz
+    djmitche-buildbot-0ea98bc.tar.gz
+
+    All of them could be found in /package/AIBC/release/3rd in demo 
+machine(10.3.3.26)
+
+--buildbot manual
+--------------------------------------------------------------------------------
+More detail pls refer to: 
+http://buildbot.sourceforge.net/manual-0.7.3.html
+--------------------------------------------------------------------------------
+
+-hezk

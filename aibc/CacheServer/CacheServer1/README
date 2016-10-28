@@ -1,0 +1,21 @@
+CacheServer1
+    |-include
+    |    |-v1                    ;depending aibc/ailibEx/lib and apply to ismg50 application
+    |    |    |-cacheserver
+    |    |-v2                    ;depending aibc/ailibEx/lib and apply to aimail GAAS application
+    |    |    |-cacheserver
+    |    |-v3                    ;depending aibclib and apply to ismg55 application
+    |    |    |-cacheserver
+    |-src
+    |    |-api1                  ;include/v1 implement
+    |    |-api2                  ;include/v2 implement
+    |    |-api3                  ;include/v3 implement
+    |    |-CacheServer
+    |    |-MemCacheServer        ;apply to aimail GAAS application
+    |    |-common
+    |-config                     ;config
+    |-test1                      ;v1 api test
+    |-test2                      ;v2 api test
+    |-test3                      ;v3 api test
+    |-tools                      ;adm
+
